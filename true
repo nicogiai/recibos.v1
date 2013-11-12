@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20131110055354_add_indexes_to_afip_acts_clientes.rb

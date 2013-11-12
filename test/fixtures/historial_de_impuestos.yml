@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cliente_id: 
+  impuesto_id: 
+  periodo_id: 
+  cliente_avisado: false
+  importe: 9.99
+  notas: MyText
+
+two:
+  cliente_id: 
+  impuesto_id: 
+  periodo_id: 
+  cliente_avisado: false
+  importe: 9.99
+  notas: MyText

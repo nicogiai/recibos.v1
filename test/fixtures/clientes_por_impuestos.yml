@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  importe: 9.99
+  recibe_mail: false
+  cliente_id: 
+  impuesto_id: 
+
+two:
+  importe: 9.99
+  recibe_mail: false
+  cliente_id: 
+  impuesto_id: 

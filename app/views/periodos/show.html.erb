@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @periodo.fecha_inicio %>
+</p>
+
+<p>
+  <strong>Fecha fin:</strong>
+  <%= @periodo.fecha_fin %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @periodo.descripcion %>
+</p>
+
+<% @periodo.impuestos.each do |impuesto| %>
+<p>
+	<%= impuesto.impuesto %>	
+</p>
+<% end %>
+
+<%= link_to 'Editar Periodo', edit_periodo_path(@periodo) %> |
+<%= link_to 'Editar Impuestos del Periodo', "" %> |
+<%= link_to 'Volver', periodos_path %>

@@ -1,0 +1,55 @@
+<h1>Listado de Impuestos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Impuesto</th>
+      <th>Importe</th>
+      <th>Cm</th>
+<!--      
+      <th>Default vencimiento0</th>
+      <th>Default vencimiento1</th>
+      <th>Default vencimiento2</th>
+      <th>Default vencimiento3</th>
+      <th>Default vencimiento4</th>
+      <th>Default vencimiento5</th>
+      <th>Default vencimiento6</th>
+      <th>Default vencimiento7</th>
+      <th>Default vencimiento8</th>
+      <th>Default vencimiento9</th>
+-->
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @impuestos.each do |impuesto| %>
+      <tr>
+        <td><%= impuesto.impuesto %></td>
+        <td><%= impuesto.importe %></td>
+        <td><%= impuesto.cm %></td>
+<!--            
+        <td><%= impuesto.default_vencimiento0 %></td>
+        <td><%= impuesto.default_vencimiento1 %></td>
+        <td><%= impuesto.default_vencimiento2 %></td>
+        <td><%= impuesto.default_vencimiento3 %></td>
+        <td><%= impuesto.default_vencimiento4 %></td>
+        <td><%= impuesto.default_vencimiento5 %></td>
+        <td><%= impuesto.default_vencimiento6 %></td>
+        <td><%= impuesto.default_vencimiento7 %></td>
+        <td><%= impuesto.default_vencimiento8 %></td>
+        <td><%= impuesto.default_vencimiento9 %></td>
+-->
+        <td><%= link_to 'Show', impuesto %></td>
+        <td><%= link_to 'Edit', edit_impuesto_path(impuesto) %></td>
+        <td><%= link_to 'Destroy', impuesto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Impuesto', new_impuesto_path %>

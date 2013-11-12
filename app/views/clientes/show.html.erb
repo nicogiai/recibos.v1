@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @cliente.cliente %>
+</p>
+
+<p>
+  <strong>Cuit:</strong>
+  <%= @cliente.cuit %>
+</p>
+
+<p>
+  <strong>Telefono1:</strong>
+  <%= @cliente.telefono1 %>
+</p>
+
+<p>
+  <strong>Telefono2:</strong>
+  <%= @cliente.telefono2 %>
+</p>
+
+<p>
+  <strong>Telefono3:</strong>
+  <%= @cliente.telefono3 %>
+</p>
+
+<p>
+  <strong>Email1:</strong>
+  <%= @cliente.email1 %>
+</p>
+
+<p>
+  <strong>Email2:</strong>
+  <%= @cliente.email2 %>
+</p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @cliente.fecha_inicio %>
+</p>
+
+<p>
+  <strong>Clave fiscal:</strong>
+  <%= @cliente.clave_fiscal %>
+</p>
+
+<p>
+  <strong>Clave muni:</strong>
+  <%= @cliente.clave_muni %>
+</p>
+
+<p>
+  <strong>Domicilio1:</strong>
+  <%= @cliente.domicilio1 %>
+</p>
+
+<p>
+  <strong>Domicilio2:</strong>
+  <%= @cliente.domicilio2 %>
+</p>
+
+<p>
+  <strong>Notas:</strong>
+  <%= @cliente.notas %>
+</p>
+
+<p>
+  <strong>Iibb cm:</strong>
+  <%= @cliente.iibb_cm %>
+</p>
+
+<p>
+  <strong>Cant adherentes:</strong>
+  <%= @cliente.cant_adherentes %>
+</p>
+
+<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
+<%= link_to 'Agregar Impuestos', "" %> |
+<%= link_to 'Back', clientes_path %>

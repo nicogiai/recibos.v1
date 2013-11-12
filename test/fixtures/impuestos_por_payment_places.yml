@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  orden: 1
+  impuesto_id: 
+  payment_place_id: 
+
+two:
+  orden: 1
+  impuesto_id: 
+  payment_place_id: 

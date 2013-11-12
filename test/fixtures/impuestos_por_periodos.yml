@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  periodo_id: 
+  impuesto_id: 
+  default_vencimiento0: 2013-11-09
+  default_vencimiento1: 2013-11-09
+  default_vencimiento2: 2013-11-09
+  default_vencimiento3: 2013-11-09
+  default_vencimiento4: 2013-11-09
+  default_vencimiento5: 2013-11-09
+  default_vencimiento6: 2013-11-09
+  default_vencimiento7: 2013-11-09
+  default_vencimiento8: 2013-11-09
+  default_vencimiento9: 2013-11-09
+  importe: 9.99
+
+two:
+  periodo_id: 
+  impuesto_id: 
+  default_vencimiento0: 2013-11-09
+  default_vencimiento1: 2013-11-09
+  default_vencimiento2: 2013-11-09
+  default_vencimiento3: 2013-11-09
+  default_vencimiento4: 2013-11-09
+  default_vencimiento5: 2013-11-09
+  default_vencimiento6: 2013-11-09
+  default_vencimiento7: 2013-11-09
+  default_vencimiento8: 2013-11-09
+  default_vencimiento9: 2013-11-09
+  importe: 9.99

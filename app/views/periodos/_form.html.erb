@@ -1,0 +1,36 @@
+<%= form_for(@periodo) do |f| %>
+  <% if @periodo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@periodo.errors.count, "error") %> prohibited this period from being saved:</h2>
+
+      <ul>
+      <% @periodo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fecha_inicio %><br>
+    <%= f.date_select :fecha_inicio %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_fin %><br>
+    <%= f.date_select :fecha_fin %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion %>
+  </div>
+
+  <% @periodo.impuestos.each do |impuesto| %>
+    <div class="field">
+    <%= f.label impuesto.impuesto %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

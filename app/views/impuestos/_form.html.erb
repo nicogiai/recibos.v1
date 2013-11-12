@@ -1,0 +1,69 @@
+<%= form_for(@impuesto) do |f| %>
+  <% if @impuesto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@impuesto.errors.count, "error") %> prohibited this tax from being saved:</h2>
+
+      <ul>
+      <% @impuesto.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :impuesto %><br>
+    <%= f.text_field :impuesto %>
+  </div>
+  <div class="field">
+    <%= f.label :importe %><br>
+    <%= f.text_field :importe %>
+  </div>
+  <div class="field">
+    <%= f.label :cm %><br>
+    <%= f.check_box :cm %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento0 %><br>
+    <%= f.date_select :default_vencimiento0 %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento1 %><br>
+    <%= f.date_select :default_vencimiento1 %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento2 %><br>
+    <%= f.date_select :default_vencimiento2 %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento3 %><br>
+    <%= f.date_select :default_vencimiento3 %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento4 %><br>
+    <%= f.date_select :default_vencimiento4 %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento5 %><br>
+    <%= f.date_select :default_vencimiento5 %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento6 %><br>
+    <%= f.date_select :default_vencimiento6 %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento7 %><br>
+    <%= f.date_select :default_vencimiento7 %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento8 %><br>
+    <%= f.date_select :default_vencimiento8 %>
+  </div>
+  <div class="field">
+    <%= f.label :default_vencimiento9 %><br>
+    <%= f.date_select :default_vencimiento9 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

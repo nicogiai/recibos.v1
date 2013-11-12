@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lugar: MyString
+  notas: MyText
+
+two:
+  lugar: MyString
+  notas: MyText

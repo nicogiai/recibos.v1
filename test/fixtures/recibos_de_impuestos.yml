@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  recibo_id: 
+  cliente_id: 
+  periodo_id: 
+  impuesto_id: 
+  fecha_programada_de_pago: 2013-11-09
+
+two:
+  recibo_id: 
+  cliente_id: 
+  periodo_id: 
+  impuesto_id: 
+  fecha_programada_de_pago: 2013-11-09

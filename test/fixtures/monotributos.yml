@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  categoria: MyString
+  importe: 9.99
+  si_adherente: false
+  importe_por_adherente: 9.99
+
+two:
+  categoria: MyString
+  importe: 9.99
+  si_adherente: false
+  importe_por_adherente: 9.99

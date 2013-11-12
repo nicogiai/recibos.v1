@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  concepto: MyString
+  importe: 9.99
+  saldo: 9.99
+  notas: MyText
+
+two:
+  concepto: MyString
+  importe: 9.99
+  saldo: 9.99
+  notas: MyText

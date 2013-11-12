@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  importe: 9.99
+  notas: MyText
+  payment_place_id: 
+
+two:
+  importe: 9.99
+  notas: MyText
+  payment_place_id: 

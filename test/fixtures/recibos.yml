@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  concepto: MyString
+  otros_importes: 9.99
+  notas: MyText
+
+two:
+  concepto: MyString
+  otros_importes: 9.99
+  notas: MyText
