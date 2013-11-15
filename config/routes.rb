@@ -20,6 +20,8 @@ RecibosV1::Application.routes.draw do
 
   resources :periodos
 
+  resources :impuestos_por_periodos
+
   # Example resource route with options:
   #   resources :products do
   #     member do

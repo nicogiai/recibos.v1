@@ -1,17 +1,23 @@
----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 >rails g controller clientes
 --agrego resources:clientes a <routes.rb>
 >rake routes
----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 GIT
 git add some-file
 git status
 git commit -m "refactor to simplify"
 
+git add -A --stages All
+git add .  --stages new and modified, without deleted
+git add -u --stages modified and deleted, without new
+
 git remote add origin https://github.com/nicogiai/recibos-v1-git
 git push origin master
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+git pull --(fetch + merge)
+git fetch
+--------------------------------------------------------------------------------------------------------------------------
 DEPRECATED
 
 rails generate scaffold usuario usuario:string clave:string email:string
@@ -37,7 +43,7 @@ rails generate model afip_act_por_cliente afip_act:references cliente:references
 rails generate model dgr_act_por_cliente dgr_act:references cliente:references
 rails generate model cliente_por_impuesto_por_periodo_por_pago pago:reference cliente: reference impuesto:reference periodo:reference
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 
 rails generate model Usuario usuario:string clave:string email:string
 rails generate model AfipAct actividad:string
@@ -68,7 +74,31 @@ rails generate migration CreateJoinTableDgrActCliente dgr_act cliente
 rails generate migration CreateJoinTablePagoHistorialDeImpuesto pago historial_de_impuesto
 
 --agregar indices para las tablas join
---rails generate migration AddIndexesToAfipActsClientes
+rails generate migration AddIndexesToAfipActsClientes
+rails generate migration AddIndexesToDgrActsClientes
+rails generate migration AddIndexesToHistorialDeImpuestosPago
 
+class AddIndexesToAfipActsClientes < ActiveRecord::Migration
+  def change
+    add_index :afip_acts_clientes, [:afip_act_id, :cliente_id], :unique => true
+    add_index :afip_acts_clientes, :cliente_id, :unique => false
+  end
+end
+
+class AddIndexesToDgrActsClientes < ActiveRecord::Migration
+  def change
+    add_index :clientes_dgr_acts, [:dgr_act_id, :cliente_id], :unique => true
+    add_index :clientes_dgr_acts, :cliente_id, :unique => false
+  end
+end
+
+class AddIndexesToHistorialDeImpuestosPago < ActiveRecord::Migration
+  def change
+    add_index :historial_de_impuestos_pagos, [:pago_id, :historial_de_impuesto_id], :unique => true, :name => 'index_hdip_on_p'
+    add_index :historial_de_impuestos_pagos, :historial_de_impuesto_id, :unique => false, :name => 'index_hdip_on_hdi'  	
+  end
+end
+--------------------------------------------------------------------------------------------------------------------------
 rake populate_db_from_csv:afip_task
 rake populate_db_from_csv:cliente_task
+--------------------------------------------------------------------------------------------------------------------------

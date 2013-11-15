@@ -9,6 +9,7 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -20,6 +21,7 @@
         <td><%= periodo.descripcion %></td>
         <td><%= link_to 'Show', periodo %></td>
         <td><%= link_to 'Edit', edit_periodo_path(periodo) %></td>
+        <td><%= link_to 'Ver Impuestos del Periodo', impuestos_por_periodos_path(id: periodo.id) %></td>
         <td><%= link_to 'Destroy', periodo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
